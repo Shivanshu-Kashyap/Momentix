@@ -1,0 +1,63 @@
+/* Styling the header container */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Styling the logo or title */
+.header h3 {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Styling the navigation menu */
+.header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Styling each menu item */
+.header ul li {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /* Smooth hover transition */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hover effect for menu items */
+.header ul li:hover {
+    background-color: white; /* White background */
+    color: #4CAF50; /* Green text */
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* Optional: Responsive adjustments */
+@media (max-width: 768px) {
+    .header ul {
+        flex-direction: column;
+        gap: 10px;
+        background-color: #4CAF50;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 10px;
+        border-radius: 5px;
+        display: none; /* Initially hidden */
+    }
+
+    .header ul.active {
+        display: flex; /* Show menu when active */
+    }
+}
